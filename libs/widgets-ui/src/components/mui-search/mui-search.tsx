@@ -16,10 +16,14 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
   const [results, setResults] = useState<WikiSearch[]>([]);
 
   useEffect(() => {
-    const wikiResults = getWikiResults(term);
-    wikiResults
-      .then((r: WikiSearch[]) => setResults(r))
-      .catch(err => console.log('Exception caught:', err.message))
+    if (term) {
+      const wikiResults = getWikiResults(term);
+      wikiResults
+        .then((r: WikiSearch[]) => setResults(r))
+        .catch(err => console.log('Exception caught:', err.message))
+    } else {
+      setResults([]);
+    }
   }, [term]);
 
   const renderedResults = results?.map(i => {
@@ -37,7 +41,7 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
 
   return (
     <div className={styles['container']}>
-      <Typography variant={'h4'}>Welcome to MuiSearch!</Typography>
+      <Typography variant={'h4'}>Welcome to Wikipedia Search</Typography>
       <Box
         component="form"
         sx={{
