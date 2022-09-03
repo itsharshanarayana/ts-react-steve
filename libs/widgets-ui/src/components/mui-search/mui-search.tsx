@@ -15,6 +15,7 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
   const [term, setTerm] = useState('');
   const [results, setResults] = useState<WikiSearch[]>([]);
 
+  // Make API call and get results.
   useEffect(() => {
     if (term) {
       const wikiResults = getWikiResults(term);
@@ -27,7 +28,12 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
   const renderedResults = results?.map(i => {
     const pageURL = `${WIKIPEDIA_BASE_URL}?curid=${i.pageid}`;
     return (
-      <MuiCard key={i.pageid} title={i.title} snippet={i.snippet} pageUrl={pageURL} pageId={i.pageid}/>
+      <MuiCard key={i.pageid}
+               title={i.title}
+               snippet={i.snippet}
+               pageUrl={pageURL}
+               pageId={i.pageid}
+      />
     );
   });
 
@@ -59,7 +65,10 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
           </FormControl>
         </div>
       </Box>
-      {renderedResults}
+      <div style={{marginTop: '15px'}}>
+        { results.length > 0 ? <Typography variant={'h6'} sx={{ marginBottom: '15px' }}>Search Results</Typography> : '' }
+        {renderedResults}
+      </div>
     </div>
   );
 }
