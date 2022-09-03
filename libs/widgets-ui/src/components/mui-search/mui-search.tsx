@@ -15,13 +15,32 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
   const [term, setTerm] = useState('');
   const [results, setResults] = useState<WikiSearch[]>([]);
 
+  const makeApiCall = () => {
+    const wikiResults = getWikiResults(term);
+    wikiResults
+      .then((r: WikiSearch[]) => setResults(r))
+      .catch(err => console.log('Exception caught:', err.message));
+  };
+
   // Make API call and get results.
   useEffect(() => {
-    if (term) {
-      const wikiResults = getWikiResults(term);
-      wikiResults
-        .then((r: WikiSearch[]) => setResults(r))
-        .catch(err => console.log('Exception caught:', err.message))
+    // For the first time useEffect is called.
+    if (term && !results.length) {
+      makeApiCall();
+      return;
+    } else {
+      const timerId = setTimeout(() => {
+        if (term) {
+          makeApiCall();
+        }
+      }, 500);
+
+      // This is the function that is returned by the useEffect's first argument.
+      // Whenever useEffect executes next time, it first executes the cleanup
+      // function, before executing its first argument.
+      return () => {
+        clearTimeout(timerId);
+      };
     }
   }, [term]);
 
@@ -70,7 +89,7 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
           results.length > 0 ?
             <Typography
               variant={'h6'}
-              sx={{marginBottom: '15px', color: 'green'}}>
+              sx={{marginBottom: '15px', color: 'lightseagreen'}}>
               Search Results
             </Typography> : ''
         }
