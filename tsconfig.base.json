@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@itsharshanarayana/api-services": ["libs/api-services/src/index.ts"],
+      "@itsharshanarayana/widget-types": ["libs/widget-types/src/index.ts"],
+      "@itsharshanarayana/widgets-types": ["libs/widgets-types/src/index.ts"],
+      "@itsharshanarayana/widgets-ui": ["libs/widgets-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
