@@ -21,8 +21,6 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
       wikiResults
         .then((r: WikiSearch[]) => setResults(r))
         .catch(err => console.log('Exception caught:', err.message))
-    } else {
-      setResults([]);
     }
   }, [term]);
 
