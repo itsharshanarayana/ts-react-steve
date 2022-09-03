@@ -1,5 +1,6 @@
 import axios, {AxiosInstance, AxiosRequestConfig} from "axios";
 import {createWikipediaClient} from "./wikipedia";
+import {ApiClientTypes} from "@itsharshanarayana/widgets-types";
 
 export function apiServices(): string {
   return 'api-services';
@@ -20,9 +21,10 @@ export const getApiClient = (baseUrl: string, config?: AxiosRequestConfig): Axio
 };
 
 
-export const getClient = (clientType: string): AxiosInstance => {
+export const getClient = (clientType: ApiClientTypes): AxiosInstance => {
   switch (clientType) {
-    case 'wikipedia':
+    // case 'wikipedia':
+    case ApiClientTypes.WIKIPEDIA_CLIENT:
       return createWikipediaClient();
     default:
       console.log('Invalid client type specified');

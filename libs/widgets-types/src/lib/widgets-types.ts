@@ -54,3 +54,7 @@ export interface WikiSearch {
   snippet: string;
   timestamp: string;
 }
+
+export enum ApiClientTypes {
+  WIKIPEDIA_CLIENT = 'wikipedia',
+}

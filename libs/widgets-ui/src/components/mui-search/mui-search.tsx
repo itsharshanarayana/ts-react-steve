@@ -45,7 +45,7 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
 
   return (
     <div className={styles['container']}>
-      <Typography variant={'h4'}>Welcome to Wikipedia Search</Typography>
+      <Typography variant={'h4'} sx={{color: 'lightseagreen'}}>Welcome to Wikipedia Search</Typography>
       <Box
         component="form"
         sx={{
@@ -66,7 +66,14 @@ export const MuiSearch: React.FC<MuiSearchProps> = (props) => {
         </div>
       </Box>
       <div style={{marginTop: '15px'}}>
-        { results.length > 0 ? <Typography variant={'h6'} sx={{ marginBottom: '15px' }}>Search Results</Typography> : '' }
+        {
+          results.length > 0 ?
+            <Typography
+              variant={'h6'}
+              sx={{marginBottom: '15px', color: 'green'}}>
+              Search Results
+            </Typography> : ''
+        }
         {renderedResults}
       </div>
     </div>
