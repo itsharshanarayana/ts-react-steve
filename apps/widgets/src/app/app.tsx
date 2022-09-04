@@ -15,9 +15,9 @@ export const App: React.FC = () => {
   return (
     <>
       {/*<MuiSearch />*/}
-      {/*<MuiDropdown />*/}
+      <MuiDropdown />
       {/*<BootDropdown />*/}
-      <SemanticDropdown options={options}/>
+      {/*<SemanticDropdown options={options}/>*/}
     </>
   );
 }
