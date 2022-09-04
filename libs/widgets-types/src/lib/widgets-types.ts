@@ -58,3 +58,8 @@ export interface WikiSearch {
 export enum ApiClientTypes {
   WIKIPEDIA_CLIENT = 'wikipedia',
 }
+
+export interface Color {
+  label: string;
+  value: string;
+}
