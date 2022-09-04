@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/redux-101/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/redux-101",
+        "index": "apps/redux-101/src/index.html",
+        "baseHref": "/",
+        "main": "apps/redux-101/src/main.tsx",
+        "polyfills": "apps/redux-101/src/polyfills.ts",
+        "tsConfig": "apps/redux-101/tsconfig.app.json",
+        "assets": [
+          "apps/redux-101/src/favicon.ico",
+          "apps/redux-101/src/assets"
+        ],
+        "styles": ["apps/redux-101/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/redux-101/src/environments/environment.ts",
+              "with": "apps/redux-101/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "redux-101:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "redux-101:build:development"
+        },
+        "production": {
+          "buildTarget": "redux-101:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/redux-101/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/redux-101"],
+      "options": {
+        "jestConfig": "apps/redux-101/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

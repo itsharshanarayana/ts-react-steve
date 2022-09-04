@@ -16,6 +16,14 @@
     "baseUrl": ".",
     "paths": {
       "@itsharshanarayana/api-services": ["libs/api-services/src/index.ts"],
+      "@itsharshanarayana/redux-101-store": [
+        "libs/redux-101-store/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-101-types": [
+        "libs/redux-101-types/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-store": ["libs/redux-store/src/index.ts"],
+      "@itsharshanarayana/redux-ui": ["libs/redux-ui/src/index.ts"],
       "@itsharshanarayana/widget-types": ["libs/widget-types/src/index.ts"],
       "@itsharshanarayana/widgets-types": ["libs/widgets-types/src/index.ts"],
       "@itsharshanarayana/widgets-ui": ["libs/widgets-ui/src/index.ts"]
