@@ -5,10 +5,10 @@ import ReduxUi from "../../../../libs/redux-ui/src/lib/redux-ui";
 
 export function App() {
   return (
-    <>
+    <div className={styles['container']}>
       <Typography variant={'h4'}>Welcome to Redux!</Typography>
       <ReduxUi />
-    </>
+    </div>
   );
 }
 

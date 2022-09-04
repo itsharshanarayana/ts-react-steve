@@ -9,7 +9,6 @@ const seedData: Food[] = [
 
 
 const frozenReducer = (state: Food[] = seedData, action: FrozenAction): Food[] => {
-  console.log('frozenReducer: action:', action);
   if (action.type === ActionTypesEnum.UPDATE_FROZEN_INV) {
     const newState: Food[] = [...state];
     switch(action.payload?.operation) {

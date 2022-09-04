@@ -9,7 +9,6 @@ const seedData: Food[] = [
 ];
 
 const meatReducer = (state: Food[] = seedData, action: MeatAction): Food[] => {
-  console.log('meatReducer: action:', action);
   if (action.type === ActionTypesEnum.UPDATE_MEAT_INV) {
     const newState: Food[] = [...state];
     switch(action.payload?.operation) {

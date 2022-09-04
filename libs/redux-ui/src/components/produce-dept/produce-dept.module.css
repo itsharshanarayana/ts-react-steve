@@ -5,3 +5,7 @@
  * .container {
  * }
 */
+
+.container {
+  margin: 15px;
+}

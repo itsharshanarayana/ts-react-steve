@@ -15,11 +15,11 @@ const ReduxUi: React.FC<ReduxUiProps> = (props) => {
       <FrozenDept data={[]} frozenInvUpdate={function (operation: string, index: number): FrozenAction {
         throw new Error('Function not implemented.');
       }} />
-      <hr/>
+
       <ProduceDept data={[]} produceInvUpdate={function (operation: string, index: number): ProduceAction {
         throw new Error('Function not implemented.');
       }} />
-      <hr/>
+
       <MeatDept data={[]} meatInvUpdate={function (operation: string, index: number): MeatAction {
         throw new Error('Function not implemented.');
       }} />

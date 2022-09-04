@@ -6,6 +6,7 @@ import React from "react";
 import DeptInventory from "../dept-inventory/dept-inventory";
 import produceInvUpdate from "../../../../redux-101-store/src/lib/action-creators/produceInvUpdate";
 import {bindActionCreators} from "redux";
+import MuiTable from "../mui-table/mui-table";
 
 /* eslint-disable-next-line */
 
@@ -15,12 +16,16 @@ class ProduceDept extends React.Component<ProduceDeptProps, ProduceDeptState> {
 
     return (
       <div className={styles['container']}>
-        <Typography variant={'h6'}>Welcome to ProduceDept!</Typography>
+        <Typography variant={'h5'} sx={{marginBottom: '15px', color: 'green'}}><b>Welcome to Produce
+          Department!</b></Typography>
 
-          <DeptInventory
+        {/*<DeptInventory
             data={this.props.data}
             operation={'+'}
-            updateInv={this.props.produceInvUpdate}/>
+            updateInv={this.props.produceInvUpdate}/>*/}
+        <MuiTable
+          data={this.props.data}
+          updateInv={this.props.produceInvUpdate}/>
       </div>
     );
   }

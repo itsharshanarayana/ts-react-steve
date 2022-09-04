@@ -7,6 +7,7 @@ import {FrozenDeptProps, FrozenDeptState, StoreState} from "@itsharshanarayana/r
 import DeptInventory from "../dept-inventory/dept-inventory";
 import frozenInvUpdate from "../../../../redux-101-store/src/lib/action-creators/frozenInvUpdate";
 import {bindActionCreators} from "redux";
+import MuiTable from "../mui-table/mui-table";
 
 /* eslint-disable-next-line */
 class FrozenDept extends React.Component<FrozenDeptProps, FrozenDeptState> {
@@ -14,13 +15,16 @@ class FrozenDept extends React.Component<FrozenDeptProps, FrozenDeptState> {
   override render() {
     return (
       <div className={styles['container']}>
-        <Typography variant={'h6'}>Welcome to FrozenDept!</Typography>
+        <Typography variant={'h5'} sx={{ marginBottom: '15px', color: 'blue' }}><b>Welcome to Frozen Department!</b></Typography>
 
-        <DeptInventory
+        {/*<DeptInventory
           data={this.props.data}
           operation={'+'}
           updateInv={this.props.frozenInvUpdate}
-        />
+        />*/}
+        <MuiTable
+          data={this.props.data}
+          updateInv={this.props.frozenInvUpdate}/>
       </div>
     );
   }
@@ -42,7 +46,6 @@ const mapStateToProps = (state): any => {
   /* Returns an object.
   * key: the name of the property in this component.
   * value: piece of state in the store. */
-  console.log('mapStateToProps: state:', state.frozen);
   return {
     data: state.frozen
   };

@@ -1,3 +1,4 @@
+export * from './components/mui-table/mui-table';
 export * from './components/dept-inventory/dept-inventory';
 export * from './components/meat-dept/meat-dept';
 export * from './components/produce-dept/produce-dept';
