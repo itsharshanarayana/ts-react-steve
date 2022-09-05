@@ -7,7 +7,6 @@ import {RepositoriesState} from "../types/state";
 const INITIALIZED = { loading: false, error: null, data: [] };
 export const repositoriesReducer = (state: RepositoriesState = INITIALIZED, action: RepositoriesAction): RepositoriesState => {
 
-  console.log('action type:', action.type);
   switch(action.type) {
     case RepositoriesActionTypes.SEARCH_REPOSITORIES:
       return { loading: true, error: null, data: [] };

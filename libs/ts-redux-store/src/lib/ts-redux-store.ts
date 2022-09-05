@@ -8,5 +8,6 @@ const middlewareEnhancer = applyMiddleware(...middlewares);
 const enhancers = [middlewareEnhancer];
 const composedEnhancers = composeWithDevTools(...enhancers);
 
-export const theStore = createStore(reducers, {}, composedEnhancers);
+export const theStore: any = createStore(reducers, {}, composedEnhancers);
+
 export default theStore;

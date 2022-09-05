@@ -9,7 +9,7 @@ export interface TsReduxUiProps {
 export function TsReduxUi(props: TsReduxUiProps) {
   return (
     <div className={styles['container']}>
-      <Typography variant={'h4'} sx={{marginLeft: '15px'}}>Search for an NPM Package</Typography>
+      <Typography variant={'h4'} sx={{marginLeft: '15px', color: 'darkcyan'}}><b>Search for an NPM Package</b></Typography>
       <RepositoriesList/>
     </div>
   );

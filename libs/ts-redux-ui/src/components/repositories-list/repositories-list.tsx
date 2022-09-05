@@ -18,8 +18,6 @@ export function RepositoriesList(props: RepositoriesListProps) {
   const dispatch = useDispatch();
   const {searchRepositories} = useActions();
 
-  console.log("Redux store:", data);
-
   const onButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     searchRepositories(term);
@@ -31,7 +29,6 @@ export function RepositoriesList(props: RepositoriesListProps) {
     );
   });
 
-  console.log('Term:', term);
   return (
     <div className={styles['container']}>
       <Stack spacing={2} direction="column">

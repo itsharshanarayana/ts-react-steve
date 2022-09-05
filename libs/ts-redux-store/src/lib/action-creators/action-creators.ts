@@ -37,7 +37,6 @@ export const searchRepositories = (term: string): any => {
         },
   * */
 
-      console.log("Search data:", data);
       const repositories: Repository[] = data.objects.map((result: any) => {
         return {
           name: result.package.name,
