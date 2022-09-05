@@ -4,12 +4,14 @@
   "projects": {
     "api-services": "libs/api-services",
     "redux-101": "apps/redux-101",
-    "redux-101-e2e": "apps/redux-101-e2e",
     "redux-101-store": "libs/redux-101-store",
     "redux-101-types": "libs/redux-101-types",
+    "redux-thunk-101": "apps/redux-thunk-101",
+    "redux-thunk-store": "libs/redux-thunk-store",
+    "redux-thunk-types": "libs/redux-thunk-types",
+    "redux-thunk-ui": "libs/redux-thunk-ui",
     "redux-ui": "libs/redux-ui",
     "widgets": "apps/widgets",
-    "widgets-e2e": "apps/widgets-e2e",
     "widgets-types": "libs/widgets-types",
     "widgets-ui": "libs/widgets-ui"
   }

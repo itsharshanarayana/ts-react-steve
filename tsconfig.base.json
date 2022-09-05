@@ -15,7 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@itsharshanarayana/action-creators": [
+        "libs/action-creators/src/index.ts"
+      ],
       "@itsharshanarayana/api-services": ["libs/api-services/src/index.ts"],
+      "@itsharshanarayana/lib//action-creators": [
+        "libs/lib/action-creators/src/index.ts"
+      ],
       "@itsharshanarayana/redux-101-store": [
         "libs/redux-101-store/src/index.ts"
       ],
@@ -23,6 +29,19 @@
         "libs/redux-101-types/src/index.ts"
       ],
       "@itsharshanarayana/redux-store": ["libs/redux-store/src/index.ts"],
+      "@itsharshanarayana/redux-thunk-store": [
+        "libs/redux-thunk-store/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-thunk-store/action-creators": [
+        "libs/redux-thunk-store/action-creators/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-thunk-store1": [
+        "libs/redux-thunk-store1/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-thunk-types": [
+        "libs/redux-thunk-types/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-thunk-ui": ["libs/redux-thunk-ui/src/index.ts"],
       "@itsharshanarayana/redux-ui": ["libs/redux-ui/src/index.ts"],
       "@itsharshanarayana/widget-types": ["libs/widget-types/src/index.ts"],
       "@itsharshanarayana/widgets-types": ["libs/widgets-types/src/index.ts"],

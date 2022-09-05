@@ -8,7 +8,7 @@ const seedData: Food[] = [
   { food: 'salmon', quantity: 135 },
 ];
 
-const meatReducer = (state: Food[] = seedData, action: MeatAction): Food[] => {
+export const meatReducer = (state: Food[] = seedData, action: MeatAction): Food[] => {
   if (action.type === ActionTypesEnum.UPDATE_MEAT_INV) {
     const newState: Food[] = [...state];
     switch(action.payload?.operation) {

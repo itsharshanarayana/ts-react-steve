@@ -5,6 +5,13 @@ export function widgetsTypes(): string {
 }
 
 export const WIKIPEDIA_BASE_URL = 'https://en.wikipedia.org';
+export const JSONPLACEHOLDER_BASE_URL = 'https://jsonplaceholder.typicode.com'
+
+export const jsonPlaceholderParams: AxiosRequestConfig = {
+  params: {
+
+  }
+};
 
 export const wikiParams: AxiosRequestConfig = {
   params: {
@@ -57,6 +64,7 @@ export interface WikiSearch {
 
 export enum ApiClientTypes {
   WIKIPEDIA_CLIENT = 'wikipedia',
+  JSONPLACEHOLDER_CLIENT = 'jsonPlaceholder',
 }
 
 export interface Color {
