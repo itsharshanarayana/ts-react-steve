@@ -11,6 +11,9 @@
     "redux-thunk-types": "libs/redux-thunk-types",
     "redux-thunk-ui": "libs/redux-thunk-ui",
     "redux-ui": "libs/redux-ui",
+    "ts-redux": "apps/ts-redux",
+    "ts-redux-store": "libs/ts-redux-store",
+    "ts-redux-ui": "libs/ts-redux-ui",
     "widgets": "apps/widgets",
     "widgets-types": "libs/widgets-types",
     "widgets-ui": "libs/widgets-ui"

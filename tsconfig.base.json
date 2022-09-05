@@ -43,6 +43,8 @@
       ],
       "@itsharshanarayana/redux-thunk-ui": ["libs/redux-thunk-ui/src/index.ts"],
       "@itsharshanarayana/redux-ui": ["libs/redux-ui/src/index.ts"],
+      "@itsharshanarayana/ts-redux-store": ["libs/ts-redux-store/src/index.ts"],
+      "@itsharshanarayana/ts-redux-ui": ["libs/ts-redux-ui/src/index.ts"],
       "@itsharshanarayana/widget-types": ["libs/widget-types/src/index.ts"],
       "@itsharshanarayana/widgets-types": ["libs/widgets-types/src/index.ts"],
       "@itsharshanarayana/widgets-ui": ["libs/widgets-ui/src/index.ts"]
