@@ -1,4 +1,4 @@
-import {RepositoriesAction, RepositoriesState, RepositoriesState1} from "@itsharshanarayana/ts-redux-store";
+import {RepositoriesAction, RepositoriesState1} from "@itsharshanarayana/ts-redux-store";
 import RepositoriesActionTypes from "../types/action-types";
 
 

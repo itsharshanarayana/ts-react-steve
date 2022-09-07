@@ -42,6 +42,17 @@
         "libs/redux-thunk-types/src/index.ts"
       ],
       "@itsharshanarayana/redux-thunk-ui": ["libs/redux-thunk-ui/src/index.ts"],
+      "@itsharshanarayana/redux-ts-store": ["libs/redux-ts-store/src/index.ts"],
+      "@itsharshanarayana/redux-ts-store1": [
+        "libs/redux-ts-store1/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-ts-ui": ["libs/redux-ts-ui/src/index.ts"],
+      "@itsharshanarayana/redux-ts-v01-store": [
+        "libs/redux-ts-v01-store/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-ts-v01-ui": [
+        "libs/redux-ts-v01-ui/src/index.ts"
+      ],
       "@itsharshanarayana/redux-ui": ["libs/redux-ui/src/index.ts"],
       "@itsharshanarayana/ts-redux-store": ["libs/ts-redux-store/src/index.ts"],
       "@itsharshanarayana/ts-redux-ui": ["libs/ts-redux-ui/src/index.ts"],

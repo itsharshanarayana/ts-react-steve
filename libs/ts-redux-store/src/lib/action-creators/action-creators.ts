@@ -71,7 +71,7 @@ export const searchRepositories = (term: string): any => {
 
     } catch (err) {
       if (err instanceof Error) {
-        dispatch({
+       + dispatch({
           type: ActionTypes.SEARCH_REPOSITORIES_ERROR,
           payload: err.message
         });

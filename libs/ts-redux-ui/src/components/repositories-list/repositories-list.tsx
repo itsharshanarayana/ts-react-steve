@@ -1,8 +1,7 @@
 import styles from './repositories-list.module.css';
 import {Box, Button, FormControl, Input, InputLabel, Stack} from "@mui/material";
 import React, {useState} from "react";
-import {useDispatch} from 'react-redux';
-import {actionCreators} from "@itsharshanarayana/ts-redux-store";
+import {Repository} from "@itsharshanarayana/ts-redux-store";
 import {useTypedSelector} from "@itsharshanarayana/ts-redux-store";
 import {useActions} from "@itsharshanarayana/ts-redux-store";
 import RepoCard from "../repo-card/repo-card";
@@ -11,11 +10,9 @@ import RepoCard from "../repo-card/repo-card";
 export interface RepositoriesListProps {
 }
 
-export function RepositoriesList(props: RepositoriesListProps) {
+export const RepositoriesList: React.FC<RepositoriesListProps> = ({}) => {
   const [term, setTerm] = useState('');
-  //const {data, loading, error} = useTypedSelector((state) => state.repositories);
   const {data, loading, error} = useTypedSelector((state) => state.repositoriesData);
-  const dispatch = useDispatch();
   const {searchRepositories} = useActions();
 
   const onButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -23,7 +20,7 @@ export function RepositoriesList(props: RepositoriesListProps) {
     searchRepositories(term);
   }
 
-  const renderedRepositories = data?.map((d, i) =>{
+  const renderedRepositories = data?.map((d: Repository, i: number) =>{
     return (
       <RepoCard repo={d} key={i}/>
     );

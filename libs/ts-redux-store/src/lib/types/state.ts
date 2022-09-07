@@ -29,3 +29,7 @@ export interface Publisher {
   username: string;
   email: string;
 }
+
+export interface NpmPackage {
+  repository: Repository;
+}
