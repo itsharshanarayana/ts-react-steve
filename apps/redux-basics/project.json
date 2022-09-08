@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/redux-basics/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/redux-basics",
+        "index": "apps/redux-basics/src/index.html",
+        "baseHref": "/",
+        "main": "apps/redux-basics/src/main.tsx",
+        "polyfills": "apps/redux-basics/src/polyfills.ts",
+        "tsConfig": "apps/redux-basics/tsconfig.app.json",
+        "assets": [
+          "apps/redux-basics/src/favicon.ico",
+          "apps/redux-basics/src/assets"
+        ],
+        "styles": ["apps/redux-basics/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/redux-basics/src/environments/environment.ts",
+              "with": "apps/redux-basics/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "redux-basics:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "redux-basics:build:development"
+        },
+        "production": {
+          "buildTarget": "redux-basics:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/redux-basics/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/redux-basics"],
+      "options": {
+        "jestConfig": "apps/redux-basics/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Search from './search';
+import RenderItems from './render-items';
 
-describe('Search', () => {
+describe('RenderItems', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Search />);
+    const { baseElement } = render(<RenderItems />);
     expect(baseElement).toBeTruthy();
   });
 });

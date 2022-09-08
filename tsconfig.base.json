@@ -28,6 +28,12 @@
       "@itsharshanarayana/redux-101-types": [
         "libs/redux-101-types/src/index.ts"
       ],
+      "@itsharshanarayana/redux-basics-store": [
+        "libs/redux-basics-store/src/index.ts"
+      ],
+      "@itsharshanarayana/redux-basics-ui": [
+        "libs/redux-basics-ui/src/index.ts"
+      ],
       "@itsharshanarayana/redux-store": ["libs/redux-store/src/index.ts"],
       "@itsharshanarayana/redux-thunk-store": [
         "libs/redux-thunk-store/src/index.ts"
@@ -54,6 +60,7 @@
         "libs/redux-ts-v01-ui/src/index.ts"
       ],
       "@itsharshanarayana/redux-ui": ["libs/redux-ui/src/index.ts"],
+      "@itsharshanarayana/reusable": ["libs/reusable/src/index.ts"],
       "@itsharshanarayana/ts-redux-store": ["libs/ts-redux-store/src/index.ts"],
       "@itsharshanarayana/ts-redux-ui": ["libs/ts-redux-ui/src/index.ts"],
       "@itsharshanarayana/widget-types": ["libs/widget-types/src/index.ts"],

@@ -15,7 +15,10 @@ class FrozenDept extends React.Component<FrozenDeptProps, FrozenDeptState> {
   override render() {
     return (
       <div className={styles['container']}>
-        <Typography variant={'h5'} sx={{ marginBottom: '15px', color: 'blue' }}><b>Welcome to Frozen Department!</b></Typography>
+        <Typography variant={'h5'}
+                    sx={{ marginBottom: '15px', color: 'blue' }}>
+          <b>Welcome to Frozen Department!</b>
+        </Typography>
 
         {/*<DeptInventory
           data={this.props.data}
@@ -28,7 +31,6 @@ class FrozenDept extends React.Component<FrozenDeptProps, FrozenDeptState> {
       </div>
     );
   }
-
 }
 
 /* connect returns a function.
