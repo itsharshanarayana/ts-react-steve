@@ -1,7 +1,7 @@
 import styles from './produce-department.module.css';
 import React from "react";
 import {connect} from "react-redux";
-import {Food, FoodAction, updateProduceInv} from "@itsharshanarayana/redux-basics-store";
+import {Food, FoodAction, FoodState, updateProduceInv} from "@itsharshanarayana/redux-basics-store";
 import RenderItems from "../render-items/render-items";
 import {bindActionCreators, Dispatch} from "redux";
 
@@ -26,13 +26,13 @@ class ProduceDepartment extends React.Component<ProduceDepartmentProps, ProduceD
   }
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: FoodState) => {
   return {
     produceData: state.produce,
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
+const mapDispatchToProps = (dispatch: Dispatch<FoodAction>) => {
   return bindActionCreators({
     updateProduceInv: updateProduceInv,
   }, dispatch);

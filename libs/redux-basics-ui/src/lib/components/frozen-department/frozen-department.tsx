@@ -2,7 +2,7 @@ import styles from './frozen-department.module.css';
 import React from "react";
 import {connect} from "react-redux";
 import {bindActionCreators, Dispatch} from "redux";
-import {Food} from "@itsharshanarayana/redux-basics-store";
+import {Food, FoodState} from "@itsharshanarayana/redux-basics-store";
 import {FoodAction} from '@itsharshanarayana/redux-basics-store';
 import {updateFrozenInv} from "@itsharshanarayana/redux-basics-store";
 import RenderItems from "../render-items/render-items";
@@ -19,7 +19,6 @@ interface FrozenDepartmentState {
 class FrozenDepartment extends React.Component<FrozenDepartmentProps, FrozenDepartmentState> {
 
   override render() {
-    console.log("Frozen data in department:", this.props.frozenData);
     return (
       <div className={styles['container']}>
         <h1>Welcome to FrozenDepartment!</h1>
@@ -31,13 +30,13 @@ class FrozenDepartment extends React.Component<FrozenDepartmentProps, FrozenDepa
   }
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: FoodState) => {
   return {
     frozenData: state.frozen,
   }
 };
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
+const mapDispatchToProps = (dispatch: Dispatch<FoodAction>) => {
   return bindActionCreators({
     updateFrozenInv: updateFrozenInv,
   }, dispatch);

@@ -1,9 +1,9 @@
 import styles from './meat-department.module.css';
 import React from "react";
 import {connect} from "react-redux";
-import {Food, FoodAction} from "@itsharshanarayana/redux-basics-store";
+import {Food, FoodAction, FoodState} from "@itsharshanarayana/redux-basics-store";
 import RenderItems from "../render-items/render-items";
-import {bindActionCreators} from "redux";
+import {bindActionCreators, Dispatch} from "redux";
 import {updateMeatInv} from "@itsharshanarayana/redux-basics-store";
 
 /* eslint-disable-next-line */
@@ -15,15 +15,6 @@ interface MeatDepartmentProps {
 interface MeatDepartmentState {}
 
 class MeatDepartment extends React.Component<MeatDepartmentProps, MeatDepartmentState> {
-
-  /*renderMeatData = this.props.meatData.map((r, i) => {
-    return (
-      <div key={i}>
-        <li>{r.food}: {r.quantity}</li>
-      </div>
-    );
-  });*/
-
   override render() {
     return (
       <div className={styles['container']}>
@@ -37,13 +28,13 @@ class MeatDepartment extends React.Component<MeatDepartmentProps, MeatDepartment
 }
 
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: FoodState) => {
   return {
     meatData: state.meat,
   };
 };
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: Dispatch<FoodAction>) => {
   return bindActionCreators({
     updateMeatInv: updateMeatInv,
   }, dispatch);

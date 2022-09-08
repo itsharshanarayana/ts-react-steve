@@ -8,3 +8,4 @@ export * from './lib/action-creators/update-frozen-inv';
 export * from './lib/action-creators/update-meat-inv';
 export * from './lib/action-creators/update-produce-inv';
 export * from './lib/reducers/base-reducer';
+export * from './lib/food-state/food-state';
